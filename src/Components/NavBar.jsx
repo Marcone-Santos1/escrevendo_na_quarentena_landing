@@ -1,9 +1,10 @@
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "./Button.jsx";
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [navbarScroll, setNavbarScroll] = useState(false)
 
     const navLinks = [
         { href: "#home", label: "Home" },
@@ -12,9 +13,22 @@ const NavBar = () => {
         { href: "#contact-us", label: "Contact Us" },
     ];
 
+    const changeBackground = () => {
+        if (window.scrollY >= 66) {
+            setNavbarScroll(true)
+        } else {
+            setNavbarScroll(false)
+        }
+    }
+
+    useEffect(() => {
+        changeBackground()
+        window.addEventListener("scroll", changeBackground)
+    })
+
     return (
         <>
-            <header className="sm:px-8 px-4 py-2 z-10 w-full">
+            <header className="sm:px-8 px-4 py-2 z-10 w-full fixed">
                 <nav className="flex justify-between items-center max-container">
                     <a href="/" className="text-3xl text-gray-50">
                         Logo
@@ -25,7 +39,7 @@ const NavBar = () => {
                             <li key={item.label}>
                                 <a
                                     href={item.href}
-                                    className="font-montserrat leading-normal text-lg text-gray-50"
+                                    className={"font-montserrat leading-normal text-lg " + navbarScroll ? 'text-gray-700' : 'text-gray-50'}
                                 >
                                     {item.label}
                                 </a>
@@ -67,7 +81,7 @@ const NavBar = () => {
                                 <li key={item.label}>
                                     <a
                                         href={item.href}
-                                        className="font-montserrat leading-normal text-lg text-gray-50 text-gray-700"
+                                        className="font-montserrat leading-normal text-lg text-gray-700"
                                     >
                                         {item.label}
                                     </a>
