@@ -14,7 +14,7 @@ const NavBar = () => {
     ];
 
     const changeBackground = () => {
-        if (window.scrollY >= 66) {
+        if (window.scrollY >= 1000) {
             setNavbarScroll(true)
         } else {
             setNavbarScroll(false)
@@ -24,6 +24,7 @@ const NavBar = () => {
     useEffect(() => {
         changeBackground()
         window.addEventListener("scroll", changeBackground)
+        console.log(navbarScroll)
     })
 
     return (
@@ -39,7 +40,7 @@ const NavBar = () => {
                             <li key={item.label}>
                                 <a
                                     href={item.href}
-                                    className={"font-montserrat leading-normal text-lg " + navbarScroll ? 'text-gray-700' : 'text-gray-50'}
+                                    className={"font-montserrat leading-normal text-lg " + navbarScroll ? 'text-gray-50' : 'text-gray-700'}
                                 >
                                     {item.label}
                                 </a>
