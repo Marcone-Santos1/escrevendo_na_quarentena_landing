@@ -5,12 +5,18 @@ import './assets/css/index.css';
 // components
 import HomeSection from "./Components/HomeSection.jsx";
 import NavBar from "./Components/NavBar.jsx";
+import {CardMetions} from "./Components/CardMetions.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <div className="min-h-[200vh]">
-            <NavBar />
-           <HomeSection />
+ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
+    <div className="min-h-[200vh]">
+        <NavBar/>
+        <HomeSection/>
+        <div className="mt-24 flex w-full gap-2 justify-center items-center">
+            <CardMetions/>
+            <CardMetions/>
+            <CardMetions/>
         </div>
-    </React.StrictMode>,
-)
+
+
+    </div>
+</React.StrictMode>,)
