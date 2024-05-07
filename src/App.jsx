@@ -13,10 +13,23 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <NavBar/>
             <HomeSection/>
             <div className="mt-24 flex flex-col w-full gap-2 justify-center items-center lg:flex-row">
-                <CardMetions/>
-                <CardMetions/>
-                <CardMetions/>
+                <CardMetions 
+                    name="Raissa"
+                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?" 
+                    grade=""
+                />
+                <CardMetions
+                    name="Raissa"
+                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?" 
+                    grade=""
+                />
+                <CardMetions
+                    name="Raissa"
+                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?"
+                    grade=""
+                />
             </div>
+            
 
 
         </div>
