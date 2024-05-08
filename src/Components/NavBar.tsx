@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
-import Button from "./Button.jsx";
+import Button from "./Button.tsx";
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [navbarScroll, setNavbarScroll] = useState(false)

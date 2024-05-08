@@ -1,5 +1,5 @@
 import notebook from '/svg/notebook.svg';
-import Button from "./Button.jsx";
+import Button from "./Button.tsx";
 
 const HomeSection = () => {
     return (
