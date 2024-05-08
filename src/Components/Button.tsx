@@ -1,7 +1,13 @@
-import PropTypes from "prop-types";
 import { twMerge } from 'tailwind-merge'
 
-const Button = ({ children, onClick, className, disabled }) => {
+interface ButtonProps {
+    children: string,
+    onClick?: () => void,
+    className?: string,
+    disabled?: boolean
+}
+
+const Button = ({ children, onClick, className, disabled }: ButtonProps) => {
     return (
         <button
             onClick={onClick}
@@ -12,12 +18,5 @@ const Button = ({ children, onClick, className, disabled }) => {
         </button>
     )
 }
-
-Button.propTypes = {
-    onClick: PropTypes.func,
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    disabled: PropTypes.bool
-};
 
 export default Button;
