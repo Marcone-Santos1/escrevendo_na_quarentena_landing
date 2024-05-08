@@ -9,7 +9,7 @@ export const CardMetions = ({ name, grade, description }) => {
             </div>
             <div className="p-6 text-center">
                 <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-purple">
-                    { name  }
+                    { name }
                 </h4>
 
                 <p className="block font-sans text-base antialiased font-bold leading-relaxed text-black">
