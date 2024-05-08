@@ -1,7 +1,7 @@
 import notebook from '/svg/notebook.svg';
 import Button from "./Button.tsx";
 
-const HomeSection = () => {
+export const HomeSection = () => {
     return (
         <div className="bg-[url('/img/Background.png')] bg-cover min-h-[100vh]">
 
@@ -31,5 +31,3 @@ const HomeSection = () => {
         </div>
     );
 }
-
-export default HomeSection;

@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AiOutlineClose } from "react-icons/ai";
 import Button from "./Button.tsx";
-const NavBar = () => {
+export const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [navbarScroll, setNavbarScroll] = useState(false)
 
@@ -93,4 +93,3 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;

@@ -1,6 +1,10 @@
-import PropTypes from 'prop-types';
+interface cardMetionProp {
+    name: string,
+    grade: number,
+    description: string
+}
 
-export const CardMetions = ({ name, grade, description }) => {
+export const CardMetion = ({ name, grade, description }: cardMetionProp) => {
 
     return (
         <div className="relative flex flex-col text-gray-700 bg-blue-light-xs shadow-md bg-clip-border sm:w-72 md:w-80 lg:w-96 xl:w-104 rounded-2xl">
@@ -24,9 +28,3 @@ export const CardMetions = ({ name, grade, description }) => {
     )
 
 }
-
-CardMetions.propTypes = {
-    name: PropTypes.string.isRequired,
-    grade: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-};
