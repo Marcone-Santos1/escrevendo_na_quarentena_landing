@@ -3,8 +3,12 @@ import {CardMetion} from "../Components/CardMetion.tsx";
 import {NavBar} from "../Components/NavBar.tsx";
 import {CardGroup} from "../Components/CardGroup.tsx";
 import {MvvCard} from "../Components/MvvCard.tsx";
+import {PartOfCard} from "../Components/PartOfCard.tsx";
 
-import PersonImage from '/img/person.svg';
+import PersonImage from '/svg/person.svg';
+import VemSerMembro from '/svg/VemSerMembro.svg';
+import VemSerAluno from '/svg/VemSerAluno.svg';
+import QueroDoar from '/svg/QueroDoar.svg';
 
 export const HomePage = () => {
     return (
@@ -47,6 +51,19 @@ export const HomePage = () => {
                     title="Valores"
                     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate debitis distinctio earum est fugit itaque maiores quam quas sed! Accusantium aspernatur beatae, consectetur cum debitis fugit necessitatibus omnis temporibus?"
                 />
+            </CardGroup>
+
+            <CardGroup>
+                <PartOfCard
+                    image={VemSerMembro}
+                />
+                <PartOfCard
+                    image={VemSerAluno}
+                />
+                <PartOfCard
+                    image={QueroDoar}
+                />
+
             </CardGroup>
         </>
     )
