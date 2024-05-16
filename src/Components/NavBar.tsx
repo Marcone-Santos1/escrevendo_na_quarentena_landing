@@ -48,7 +48,7 @@ export const NavBar = () => {
 
     return (
         <>
-            <header className="sm:px-8 px-4 py-2 z-10 w-full fixed">
+            <header className={`sm:px-8 px-4 py-2 z-10 w-full fixed ${!navbarScroll ? '' : 'bg-blue-light-xs'}`}>
                 <nav className="flex justify-between items-center max-container">
                     <Link
                         to={`/`}
