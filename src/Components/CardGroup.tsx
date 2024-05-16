@@ -11,7 +11,7 @@ export const CardGroup = ({ children, className }: CardGroupProps) => {
 
     return (
         <div className="flex flex-col w-full gap-2 justify-center items-center lg:flex-row">
-            <div className={twMerge('mt-24 flex flex-col w-5/6 gap-2 justify-center items-center lg:flex-row', className)}>
+            <div className={twMerge('mt-24 flex flex-col w-2/3 gap-2 justify-center items-center lg:flex-row', className)}>
                 { children }
             </div>
         </div>

@@ -4,11 +4,14 @@ import {NavBar} from "../Components/NavBar.tsx";
 import {CardGroup} from "../Components/CardGroup.tsx";
 import {MvvCard} from "../Components/MvvCard.tsx";
 import {PartOfCard} from "../Components/PartOfCard.tsx";
+import {NewsCard} from "../Components/NewsCard.tsx";
 
 import PersonImage from '/svg/person.svg';
 import VemSerMembro from '/svg/VemSerMembro.svg';
 import VemSerAluno from '/svg/VemSerAluno.svg';
 import QueroDoar from '/svg/QueroDoar.svg';
+import Jornal from '/svg/Jornal.svg';
+import PodCast from '/svg/Podcast.svg';
 
 export const HomePage = () => {
     return (
@@ -16,6 +19,20 @@ export const HomePage = () => {
             <NavBar/>
 
             <HomeSection/>
+
+            <CardGroup>
+                <NewsCard
+                    title="Projeto ajuda estudantes a irem bem na redação do Enem"
+                    description="Projeto é desenvolvido por professores do bairro Capão Redondo, na Zona Sul de São Paulo."
+                    image={Jornal}
+                />
+                <NewsCard
+                    title="‘Escrevendo na Quarentena’ promove cursos de redação gratuitos para jovens cidadãos de baixa renda"
+                    description="Neste episódio vamos conversar com Allan Anjos e Cecília Oliveira, do Escrevendo na Quarentena. Um projeto que promove cursos de redação gratuitos para jovens cidadãos de baixa renda."
+                    image={PodCast}
+                />
+            </CardGroup>
+
             <CardGroup>
                 <CardMetion
                     name="Raissa"
