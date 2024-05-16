@@ -4,6 +4,8 @@ import {NavBar} from "../Components/NavBar.tsx";
 import {CardGroup} from "../Components/CardGroup.tsx";
 import {MvvCard} from "../Components/MvvCard.tsx";
 
+import PersonImage from '/img/person.svg';
+
 export const HomePage = () => {
     return (
         <>
@@ -15,16 +17,19 @@ export const HomePage = () => {
                     name="Raissa"
                     description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?"
                     grade={940}
+                    image={PersonImage}
                 />
                 <CardMetion
                     name="Raissa"
                     description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?"
                     grade={940}
+                    image={PersonImage}
                 />
                 <CardMetion
                     name="Raissa"
                     description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?"
                     grade={940}
+                    image={PersonImage}
                 />
             </CardGroup>
 
