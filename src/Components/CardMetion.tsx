@@ -7,7 +7,7 @@ interface cardMetionProp {
 export const CardMetion = ({ name, grade, description }: cardMetionProp) => {
 
     return (
-        <div className="relative flex flex-col text-gray-700 bg-blue-light-xs shadow-md bg-clip-border sm:w-72 md:w-80 lg:w-96 xl:w-104 rounded-2xl">
+        <div className="relative flex flex-col text-gray-700 bg-blue-light-xs shadow-md bg-clip-border w-2/3 sm:w-2/3 md:w-4/5 lg:w-96 xl:w-104 rounded-2xl">
             <div className="relative mx-auto mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border w-52 sm:w-56 md:w-60 lg:w-64 xl:w-72 !rounded-full border-8 border-white">
                 <img src="/img/person.svg" alt="profile-picture" className="w-full" />
             </div>
