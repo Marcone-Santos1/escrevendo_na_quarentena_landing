@@ -29,7 +29,7 @@ export const HomePage = () => {
             </CardGroup>
 
 
-            <CardGroup>
+            <CardGroup className="shadow-lg p-6 md:p:16">
                 <MvvCard
                     title="Missão"
                     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate debitis distinctio earum est fugit itaque maiores quam quas sed! Accusantium aspernatur beatae, consectetur cum debitis fugit necessitatibus omnis temporibus?"
