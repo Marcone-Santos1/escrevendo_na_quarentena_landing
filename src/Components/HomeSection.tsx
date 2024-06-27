@@ -6,8 +6,9 @@ export const HomeSection = () => {
         <div className="bg-[url('/img/Background.png')] bg-cover min-h-[100vh]">
 
             <div
-                className="min-h-[100vh] max-w-4xl gap-6 mx-auto grid grid-cols-1 p-4 xl:max-w-5xl md:p-10 sm:p-6 lg:gap-x-20 lg:grid-cols-2 content-center items-center">
-                <div className="flex flex-col gap-4 md:content-center text-center lg:text-left">
+                className="min-h-[100vh] max-w-4xl gap-16 mx-auto grid grid-cols-1 p-4 xl:max-w-[80%] md:p-10 sm:p-6 lg:gap-x-20 lg:grid-cols-2 content-center items-center"
+            >
+                <div className="flex flex-col gap-4 max-w-[80%] md:content-center text-center lg:text-left">
 
                     <h1 className="text-gray-50 font-extrabold uppercase text-5xl">Escrevendo na Quarentena</h1>
                     <p className="text-gray-50">
