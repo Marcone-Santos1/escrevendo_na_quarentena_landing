@@ -20,8 +20,11 @@ export const HomePage = () => {
 
             <HomeSection/>
 
-            <CardGroup title={<h2>O que é o <span className="text-purple font-bold">EQ</span>?</h2>}
-                       className="text-center lg:flex-col">
+            <CardGroup
+                title={<h2>O que é o <span className="text-purple font-bold">EQ</span>?</h2>}
+                className="text-center lg:flex-col"
+                id="about-us"
+            >
                 <p>
                     O <span className="text-purple font-bold">E</span>screvendo na <span
                     className="text-purple font-bold">Q</span>uarentena, atualmente uma ONG, é um
@@ -40,7 +43,9 @@ export const HomePage = () => {
 
             <CardGroup
                 title={<h2>Nosso trabalho vai muito além da <span className="text-purple font-bold">redação</span>!
-                </h2>}>
+                </h2>}
+                id="our-results"
+            >
                 <NewsCard
                     title="Projeto ajuda estudantes a irem bem na redação do Enem"
                     description="Projeto é desenvolvido por professores do bairro Capão Redondo, na Zona Sul de São Paulo."
@@ -75,7 +80,7 @@ export const HomePage = () => {
             </CardGroup>
 
 
-            <CardGroup className="shadow-lg p-2 md:p-6 lg:p-16" title={<h2>MVV</h2>}>
+            <CardGroup className="shadow-lg p-2 md:p-6 lg:p-16" title={<h2>MVV</h2>} id="MVV">
                 <MvvCard
                     title="Missão"
                     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate debitis distinctio earum est fugit itaque maiores quam quas sed! Accusantium aspernatur beatae, consectetur cum debitis fugit necessitatibus omnis temporibus?"
@@ -90,7 +95,7 @@ export const HomePage = () => {
                 />
             </CardGroup>
 
-            <CardGroup title={<h2>Faça parte!</h2>}>
+            <CardGroup title={<h2>Faça parte!</h2>} id="join">
                 <PartOfCard
                     image={VemSerMembro}
                 />

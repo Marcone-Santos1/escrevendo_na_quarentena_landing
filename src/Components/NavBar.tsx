@@ -22,19 +22,20 @@ export const NavBar = () => {
     const location = useLocation();
     const {pathname} = location;
 
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [navbarScroll, setNavbarScroll] = useState(false)
 
     const navLinks: NavLinksI[] = [
         {href: "/#home", label: "Home", externalLink: isHomePage(pathname) },
-        {href: "/#about-us", label: "About Us", externalLink: isHomePage(pathname) },
+        {href: "/#about-us", label: "Sobre nós", externalLink: isHomePage(pathname) },
+        {href: "/#our-results", label: "Resultados", externalLink: isHomePage(pathname) },
         {href: "/history", label: "History", externalLink: true},
-        {href: "/#contact-us", label: "Contact Us", externalLink: isHomePage(pathname) },
+        {href: "/#MVV", label: "MVV", externalLink: isHomePage(pathname) },
+        {href: "/#join", label: "Faça Parte", externalLink: isHomePage(pathname) },
     ];
 
     const changeBackground = () => {
-        if (window.scrollY >= 1000) {
+        if (window.scrollY >= window.innerHeight) {
             setNavbarScroll(true)
         } else {
             setNavbarScroll(false)

@@ -5,17 +5,18 @@ interface CardGroupProps {
     children: ReactNode,
     className?: string
     titleClassName?: string
-    title?: string|ReactNode
+    title?: string|ReactNode,
+    id?: string
 }
 
 
-export const CardGroup = ({ children, className, title, titleClassName }: CardGroupProps) => {
+export const CardGroup = ({ children, className, title, titleClassName, id }: CardGroupProps) => {
 
     return (
 
         <>
-            <div className="mt-24 flex flex-col justify-center items-center">
-                <div className={twMerge('text-center text-5xl mb-12 max-w-xl', titleClassName)}>
+            <div className="flex flex-col justify-center items-center" id={id}>
+                <div className={twMerge('text-center text-5xl mb-12 max-w-xl mt-24', titleClassName)}>
                     { title }
                 </div>
                 <div className="flex flex-col w-full gap-2 justify-center items-center lg:flex-row">
