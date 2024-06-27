@@ -18,7 +18,7 @@ export const HomeSection = () => {
                     <Button
                         className="block bg-orange-dark p-2 w-100 rounded-lg lg:w-52"
                     >
-                        <p className="text-gray-50 font-bold">Nos conheça</p>
+                        <p className="text-gray-800 font-bold">Nos conheça</p>
                     </Button>
                 </div>
 

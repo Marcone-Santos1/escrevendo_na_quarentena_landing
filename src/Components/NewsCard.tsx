@@ -12,9 +12,9 @@ export const NewsCard = ({ title, description, image }: cardMetionProp) => {
                 <img src={image} alt="profile-picture" className="w-full object-fill" />
             </div>
             <div className="p-4 text-justify">
-                <h4 className="block mb-2 font-sans text-sm lg:text-base antialiased font-bold leading-snug tracking-normal text-gray-800">
+                <h3 className="block mb-2 font-sans text-sm lg:text-base antialiased font-bold leading-snug tracking-normal text-gray-800">
                     { title }
-                </h4>
+                </h3>
 
                 <p className="block font-sans text-justify text-sm lg:text-base antialiased font-medium leading-relaxed text-gray-600">
                     { description }

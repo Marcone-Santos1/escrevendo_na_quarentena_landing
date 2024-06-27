@@ -13,15 +13,15 @@ export const CardMetion = ({ name, grade, description, image }: cardMetionProp) 
                 <img src={image} alt="profile-picture" className="w-44" />
             </div>
             <div className="p-6 text-center">
-                <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-purple">
+                <h3 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-purple">
                     { name }
-                </h4>
+                </h3>
 
                 <p className="block font-sans text-base antialiased font-bold leading-relaxed text-black">
                     { grade }
                 </p>
 
-                <p className="block font-sans text-base antialiased font-medium leading-relaxed text-white">
+                <p className="block font-sans text-base antialiased font-medium leading-relaxed text-gray-900">
                     { description }
                 </p>
             </div>
