@@ -20,7 +20,27 @@ export const HomePage = () => {
 
             <HomeSection/>
 
-            <CardGroup>
+            <CardGroup title={<h2>O que é o <span className="text-purple font-bold">EQ</span>?</h2>}
+                       className="text-center lg:flex-col">
+                <p>
+                    O <span className="text-purple font-bold">E</span>screvendo na <span
+                    className="text-purple font-bold">Q</span>uarentena, atualmente uma ONG, é um
+                    cursinho gratuito de redação que foi criado com o fito de democratizar a educação para jovens de
+                    baixa renda.
+                </p>
+                <p>
+                    O projeto visa, principalmente, abranger as possibilidades de acesso dos alunos de escola pública ao
+                    ensino superior.
+                </p>
+                <p>
+                    Os estudantes da ONG apresentaram ótimos resultados em dois anos de existência do EQ, que
+                    recentemente, iniciou mais um ano de aulas.
+                </p>
+            </CardGroup>
+
+            <CardGroup
+                title={<h2>Nosso trabalho vai muito além da <span className="text-purple font-bold">redação</span>!
+                </h2>}>
                 <NewsCard
                     title="Projeto ajuda estudantes a irem bem na redação do Enem"
                     description="Projeto é desenvolvido por professores do bairro Capão Redondo, na Zona Sul de São Paulo."
@@ -33,29 +53,29 @@ export const HomePage = () => {
                 />
             </CardGroup>
 
-            <CardGroup>
+            <CardGroup title={<h2>Nossos resultados</h2>}>
                 <CardMetion
                     name="Raissa"
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?"
+                    description="Lorem ipsum dolor sit amet"
                     grade={940}
                     image={PersonImage}
                 />
                 <CardMetion
                     name="Raissa"
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?"
+                    description="Lorem ipsum dolor sit amet"
                     grade={940}
                     image={PersonImage}
                 />
                 <CardMetion
                     name="Raissa"
-                    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam fuga molestias quae quisquam sapiente totam vel! Aliquam aspernatur delectus earum ipsam iste minus neque ratione repellendus veniam vero! Exercitationem, fugit?"
+                    description="Lorem ipsum dolor sit amet"
                     grade={940}
                     image={PersonImage}
                 />
             </CardGroup>
 
 
-            <CardGroup className="shadow-lg p-2 md:p-6 lg:p-16">
+            <CardGroup className="shadow-lg p-2 md:p-6 lg:p-16" title={<h2>MVV</h2>}>
                 <MvvCard
                     title="Missão"
                     content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate debitis distinctio earum est fugit itaque maiores quam quas sed! Accusantium aspernatur beatae, consectetur cum debitis fugit necessitatibus omnis temporibus?"
@@ -70,7 +90,7 @@ export const HomePage = () => {
                 />
             </CardGroup>
 
-            <CardGroup>
+            <CardGroup title={<h2>Faça parte!</h2>}>
                 <PartOfCard
                     image={VemSerMembro}
                 />
