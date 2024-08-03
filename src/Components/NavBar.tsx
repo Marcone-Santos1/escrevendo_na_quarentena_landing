@@ -8,6 +8,7 @@ import {NavLinksI} from "../Contracts/NavLinksI.ts";
 
 import Button from "./Button.tsx";
 import {isHomePage} from "../Helpers/Helper.ts";
+import {MENU_MIN_HEIGHT} from "../Constants/Conts.ts";
 
 export const NavBar = () => {
 
@@ -36,7 +37,7 @@ export const NavBar = () => {
     ];
 
     const changeBackground = () => {
-        if (window.scrollY >= window.innerHeight) {
+        if (window.scrollY >= MENU_MIN_HEIGHT) {
             setNavbarScroll(true)
         } else {
             setNavbarScroll(false)
