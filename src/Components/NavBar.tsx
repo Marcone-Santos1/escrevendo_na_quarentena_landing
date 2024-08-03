@@ -17,6 +17,15 @@ export const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [navbarScroll, setNavbarScroll] = useState(false)
 
+    useEffect(() => {
+        isMenuOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset';
+    }, [isMenuOpen]);
+
+    useEffect(() => {
+        changeBackground()
+        window.addEventListener("scroll", changeBackground)
+    })
+
     const navLinks: NavLinksI[] = [
         {href: "/#home", label: "Home", externalLink: isHomePage(pathname) },
         {href: "/#about-us", label: "Sobre nós", externalLink: isHomePage(pathname) },
@@ -33,11 +42,6 @@ export const NavBar = () => {
             setNavbarScroll(false)
         }
     }
-
-    useEffect(() => {
-        changeBackground()
-        window.addEventListener("scroll", changeBackground)
-    })
 
     return (
         <>
@@ -64,6 +68,7 @@ export const NavBar = () => {
                                 ) : (
                                     <a
                                         href={item.href}
+                                        onClick={() => setIsMenuOpen(false)}
                                         className={`font-montserrat leading-normal text-lg ${!navbarScroll ? 'text-gray-50' : 'text-gray-700'}`}
                                     >
                                         {item.label}
@@ -82,7 +87,6 @@ export const NavBar = () => {
                             Login
                         </Button>
                     </div>
-
                     <div
                         className="hidden max-lg:block cursor-pointer"
                         onClick={() => {
@@ -95,9 +99,19 @@ export const NavBar = () => {
                 </nav>
             </header>
             {isMenuOpen && (
-                <div>
-                    <nav className="fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100  ">
-                        <ul className=" lg:hidden flex flex-col items-center justify-center h-full gap-5">
+                <div className="fixed top-0 right-0 left-0 bottom-0 lg:bottom-auto bg-slate-100 z-50">
+                    <div
+                        className="hidden max-lg:block cursor-pointer p-4"
+                        onClick={() => {
+                            setIsMenuOpen(!isMenuOpen);
+                        }}
+                    >
+                    {isMenuOpen ? <AiOutlineClose className="text-4xl"/> :
+                            <RxHamburgerMenu className="text-4xl text-gray-50"/>}
+                    </div>
+                    <nav className="flex flex-col items-center justify-center h-[calc(100vh+1rem)] ">
+
+                        <ul className="lg:hidden flex flex-col items-center justify-center gap-5">
                             {navLinks.map((item) => (
                                 <li key={item.label}>
                                     {item.externalLink ? (
@@ -110,6 +124,7 @@ export const NavBar = () => {
                                     ) : (
                                         <a
                                             href={item.href}
+                                            onClick={() => setIsMenuOpen(false)}
                                             className="font-montserrat leading-normal text-lg text-gray-700"
                                         >
                                             {item.label}
