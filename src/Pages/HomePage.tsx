@@ -5,6 +5,7 @@ import {CardGroup} from "../Components/CardGroup.tsx";
 import {MvvCard} from "../Components/MvvCard.tsx";
 import {PartOfCard} from "../Components/PartOfCard.tsx";
 import {NewsCard} from "../Components/NewsCard.tsx";
+import {Footer} from "../Components/Footer.tsx";
 
 import PersonImage from '/svg/person.svg';
 import VemSerMembro from '/svg/VemSerMembro.svg';
@@ -107,6 +108,8 @@ export const HomePage = () => {
                 />
 
             </CardGroup>
+
+            <Footer />
         </>
     )
 }

@@ -4,18 +4,10 @@ import {AiOutlineClose} from "react-icons/ai";
 
 import {Link, useLocation} from "react-router-dom";
 
+import {NavLinksI} from "../Contracts/NavLinksI.ts";
 
 import Button from "./Button.tsx";
-
-interface NavLinksI {
-    href: string,
-    label: string,
-    externalLink: boolean
-}
-
-const isHomePage = (pathname: string) => {
-    return pathname !== '/';
-}
+import {isHomePage} from "../Helpers/Helper.ts";
 
 export const NavBar = () => {
 

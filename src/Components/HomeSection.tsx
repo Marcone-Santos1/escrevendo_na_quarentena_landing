@@ -23,7 +23,7 @@ export const HomeSection = () => {
                 </div>
 
                 <div>
-                    <img className="hidden w-full h-full lg:block"
+                    <img loading="lazy" className="hidden w-full h-full lg:block"
                          src={notebook} alt=""/>
                 </div>
 
