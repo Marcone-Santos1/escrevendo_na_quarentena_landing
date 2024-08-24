@@ -28,7 +28,7 @@ export const HomePage = () => {
             >
                 <p>
                     O <span className="text-purple font-bold">E</span>screvendo na <span
-                    className="text-purple font-bold">Q</span>uarentena, atualmente uma ONG, é um
+                    className="text-purple font-bold">Q</span>uebrada, atualmente uma ONG, é um
                     cursinho gratuito de redação que foi criado com o fito de democratizar a educação para jovens de
                     baixa renda.
                 </p>
@@ -84,15 +84,15 @@ export const HomePage = () => {
             <CardGroup className="shadow-lg p-2 md:p-6 lg:p-16" title={<h2>MVV</h2>} id="MVV">
                 <MvvCard
                     title="Missão"
-                    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate debitis distinctio earum est fugit itaque maiores quam quas sed! Accusantium aspernatur beatae, consectetur cum debitis fugit necessitatibus omnis temporibus?"
+                    content="Promover o desenvolvimento crítico e a transformação da vida das pessoas, por meio de ações educativas e culturais, proporcionando o acesso ao ensino superior e a prática da cidadania."
                 />
                 <MvvCard
                     title="Visão"
-                    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate debitis distinctio earum est fugit itaque maiores quam quas sed! Accusantium aspernatur beatae, consectetur cum debitis fugit necessitatibus omnis temporibus?"
+                    content="Ser referência nacional em educação gratuita e de qualidade, promovendo um Brasil justo, equitativo e solidário."
                 />
                 <MvvCard
                     title="Valores"
-                    content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi cupiditate debitis distinctio earum est fugit itaque maiores quam quas sed! Accusantium aspernatur beatae, consectetur cum debitis fugit necessitatibus omnis temporibus?"
+                    content="Empatia, Horizontalidade, Comprometimento, Respeito, Humanidade, Diversidade e Equidade"
                 />
             </CardGroup>
 

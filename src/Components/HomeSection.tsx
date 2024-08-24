@@ -10,12 +10,15 @@ export const HomeSection = () => {
             >
                 <div className="flex flex-col gap-4 md:content-center text-center lg:text-left">
 
-                    <h1 className="text-gray-50 font-extrabold uppercase text-5xl">Escrevendo na Quarentena</h1>
+                    <h1 className="text-gray-50 font-extrabold uppercase text-5xl">Escrevendo na Quebrada</h1>
                     <p className="text-gray-50">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        O Escrevendo na Quebrada, atualmente uma ONG, é um cursinho gratuito de redação que foi criado com o fito de democratizar a educação para jovens de baixa renda. O projeto visa, principalmente, abranger as possibilidades de acesso dos alunos de escola pública ao ensino superior. Os estudantes da ONG apresentaram ótimos resultados em dois anos de existência do EQ.
                     </p>
 
                     <Button
+                        onClick={() => {
+                            document.getElementById("about-us")?.scrollIntoView()
+                        }}
                         className="block bg-orange-dark p-2 w-100 rounded-lg lg:w-52"
                     >
                         <p className="text-gray-800 font-bold">Nos conheça</p>
