@@ -44,8 +44,8 @@ export const Footer = () => {
                     <FooterCardTitle title={<h2>Conecte-se ao <span className="text-purple font-bold">EQ</span></h2>}/>
                     <div className="flex flex-col gap-4 items-center">
                         <div className="flex gap-2">
-                            <img className="cursor-pointer" src={FacebookImage} alt="" onClick={() => window.open('https://www.instagram.com/escrevendonaquarentena/')}/>
-                            <img className="cursor-pointer" src={InstagramImage} alt="" onClick={() => window.open('https://www.facebook.com/Escrevendonaquarentena/')}/>
+                            <img className="cursor-pointer" src={InstagramImage} alt="" onClick={() => window.open('https://www.instagram.com/escrevendonaquarentena/')}/>
+                            <img className="cursor-pointer" src={FacebookImage} alt="" onClick={() => window.open('https://www.facebook.com/Escrevendonaquarentena/')}/>
                         </div>
                         <FooterCardLinks links={ConnectToEQ}/>
                     </div>
