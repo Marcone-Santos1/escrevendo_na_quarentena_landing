@@ -16,24 +16,15 @@ export const Footer = () => {
     const {pathname} = location;
 
     const resoursesBar: NavLinksI[] = [
-        {href: "/#home", label: "Home", externalLink: isHomePage(pathname) },
-        {href: "/#about-us", label: "Sobre nós", externalLink: isHomePage(pathname) },
-        {href: "/#our-results", label: "Resultados", externalLink: isHomePage(pathname) },
-        {href: "/history", label: "History", externalLink: true},
-        {href: "/#MVV", label: "MVV", externalLink: isHomePage(pathname) },
-        {href: "/#join", label: "Faça Parte", externalLink: isHomePage(pathname) },
+        {href: "/", label: "Edital", externalLink: true },
     ];
     const joinUs: NavLinksI[] = [
-        {href: "/#home", label: "Home", externalLink: isHomePage(pathname) },
-        {href: "/history", label: "History", externalLink: true},
-        {href: "/#MVV", label: "MVV", externalLink: isHomePage(pathname) },
-        {href: "/#join", label: "Faça Parte", externalLink: isHomePage(pathname) },
-    ];
+        {href: "/", label: "Como apoiar", externalLink: true },
+        {href: "/", label: "Seja um voluntário", externalLink: true},
+        {href: "/", label: "Parcerias", externalLink: isHomePage(pathname) },
+    ]
     const ConnectToEQ: NavLinksI[] = [
-        {href: "/#home", label: "Home", externalLink: isHomePage(pathname)},
-        {href: "/#about-us", label: "Sobre nós", externalLink: isHomePage(pathname)},
-        {href: "/#MVV", label: "MVV", externalLink: isHomePage(pathname)},
-        {href: "/#join", label: "Faça Parte", externalLink: isHomePage(pathname)},
+        {href: "mailto:escrevendoquarentena.rh@gmail.com", label: "E-mail", externalLink: true},
     ];
 
     return (
@@ -51,10 +42,10 @@ export const Footer = () => {
                 </FooterCard>
                 <FooterCard>
                     <FooterCardTitle title={<h2>Conecte-se ao <span className="text-purple font-bold">EQ</span></h2>}/>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 items-center">
                         <div className="flex gap-2">
-                            <img src={FacebookImage} alt=""/>
-                            <img src={InstagramImage} alt=""/>
+                            <img className="cursor-pointer" src={FacebookImage} alt="" onClick={() => window.open('https://www.instagram.com/escrevendonaquarentena/')}/>
+                            <img className="cursor-pointer" src={InstagramImage} alt="" onClick={() => window.open('https://www.facebook.com/Escrevendonaquarentena/')}/>
                         </div>
                         <FooterCardLinks links={ConnectToEQ}/>
                     </div>
