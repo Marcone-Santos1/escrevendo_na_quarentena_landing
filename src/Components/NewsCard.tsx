@@ -7,8 +7,8 @@ interface cardMetionProp {
 export const NewsCard = ({ title, description, image }: cardMetionProp) => {
 
     return (
-        <div className="flex flex-col text-gray-700 p-6 shadow-md bg-clip-border rounded-2xl m-w-1/2 w-full max-h-[480px] h-full">
-            <div className="mx-auto mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border w-11/12 h-80">
+        <div className="flex flex-col text-gray-700 p-6 shadow-md bg-clip-border rounded-2xl m-w-1/2 w-full h-[30rem]">
+            <div className="mx-auto mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border w-11/12">
                 <img src={image} alt="profile-picture" className="w-full object-fill" />
             </div>
             <div className="p-4 text-justify">
