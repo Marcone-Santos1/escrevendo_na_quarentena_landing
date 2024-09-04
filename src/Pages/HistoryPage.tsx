@@ -1,6 +1,11 @@
 import {NavBar} from "../Components/NavBar.tsx";
 import {useEffect, useRef, useState} from "react";
-import {FaAward, FaGlobeAmericas, FaHandsHelping, FaLeaf} from "react-icons/fa";
+import {FaAward, FaTrophy, FaLeaf} from "react-icons/fa";
+import { PiTelevisionSimple } from "react-icons/pi";
+import { FaLandmarkFlag } from "react-icons/fa6";
+import { MdPublishedWithChanges } from "react-icons/md";
+
+
 import {motion} from 'framer-motion';
 import {Footer} from "../Components/Footer.tsx";
 
@@ -10,39 +15,56 @@ export const HistoryPage = () => {
 
     const milestones = [
         {
-            year: 2000,
-            title: 'Foundation',
-            description: 'Our NGO was founded with a vision to make a positive impact on the world.',
+            year: 2020,
+            title: 'Fundação',
+            description: 'Em março de 2020, diante o agravamento do cenário pandêmico e migração das aulas para modelo EaD, a ideia de começar a ensinar redação online para os amigos mais próximos começou a ser fomentada na cabeça de três calouros universitários.',
             icon: <FaLeaf className="text-green-500"/>,
-            type: 'foundation'
-        },
-        {
-            year: 2005,
-            title: 'First Major Project',
-            description: 'Launched our first major environmental conservation project in the Amazon rainforest.',
-            icon: <FaGlobeAmericas className="text-blue-500"/>,
-            type: 'project'
-        },
-        {
-            year: 2010,
-            title: 'International Expansion',
-            description: 'Expanded our operations to 5 different countries across 3 continents.',
-            icon: <FaHandsHelping className="text-purple-500"/>,
-            type: 'expansion'
-        },
-        {
-            year: 2015,
-            title: 'Major Award',
-            description: 'Received the Global Humanitarian Award for our efforts in sustainable development.',
-            icon: <FaAward className="text-yellow-500"/>,
-            type: 'achievement'
         },
         {
             year: 2020,
-            title: '20th Anniversary',
-            description: 'Celebrated 20 years of making a difference with a virtual global conference.',
+            title: 'Inicio',
+            description: 'Assim, iniciava-se o primeiro ano do Escrevendo na Quarentena. O projeto reuniu inicialmente mais de 60 colaboradores de diversas universidades e um pouco mais de 80 alunos espalhados pelo Brasil.\n' +
+                'Ainda, os estudantes atendidos pelo EQ nesse primeiro ano e que prestaram o Enem 2020 apresentaram ótimos resultados, como:\n' +
+                '13 redações acima de 900\n' +
+                ' e 8 redações entre 800 e 880',
+            icon: <FaTrophy  className="text-blue-500"/>,
+        },
+        {
+            year: 2020,
+            title: 'Entrevista - Bom Dia São Paulo',
+            description: 'Esses resultados surpreendentes nos trouxe visibilidade e fomos entrevistados pelo Bom Dia São Paulo.\n' +
+                'Além disso, começou uma corrida contra o tempo para estruturar o EQ (que inicialmente, duraria somente um ano), e criar alicerces de um projeto embasado e capacitado para atender os estudantes que ainda seriam assolados pela defasagem no ensino público.',
+            icon: <PiTelevisionSimple  className="text-blue-500"/>,
+        },
+        {
+            year: 2021,
+            title: 'Reformulação',
+            description: 'Crescendo e buscando abranger o apoio prestado aos estudantes, a estrutura do EQ passou por uma reformulação e aprimoramento, visando ser capaz de atender mais alunos e melhorar a qualidade dos serviços oferecidos.\n' +
+            'Iniciamos uma vaquinha, na qual todo dinheiro arrecadado foi destinado aos alunos e formalização do EQ como uma ONG.\n'+
+            'Com o valor obtido, conseguimos fornecer tablet para três alunos, além de subsidiar a internet para acesso às aulas e a taxa de inscrição do Enem de outros 4 estudantes.',
+            icon: <MdPublishedWithChanges className="text-orange-500"/>,
+        },
+        {
+            year: 2021,
+            title: 'Negresco',
+            description: 'Ainda, no segundo ano do EQ, fizemos conexões para além do projeto e estabelecemos parcerias fundamentais para alcançarmos outros êxitos. Uma das mais notáveis foi o projeto ser finalista na iniciativa "Geração Que Faz Bem" da Nestlé,  ganhando mentorias estruturantes no decorrer de quatro meses e estampando as embalagens dos biscoitos Negresco.',
+            icon: <FaAward className="text-yellow-500"/>,
+        },
+        {
+            year: 2021,
+            title: 'Consolidação',
+            description: 'Com a estrutura pedagógica mais consolidada, os estudantes do  EQ de 2021 repetiram os feitos do ano anterior e apresentaram resultados tão satisfatórios quanto os anteriores.\n'+
+            '12 redações acima de 900\n' +
+            '20 redações entre 800 e 880\n'+
+            '95% dos estudantes acreditam que o Escrevendo na Quarentena contribuiu nas notas.\n'+
+            'Nossos corretores corrigiram o total de 359 redações, entregues no decorrer de 19 aulas.',
             icon: <FaLeaf className="text-green-500"/>,
-            type: 'anniversary'
+        },
+        {
+            year: 2022,
+            title: 'Escrevendo na Quarentena era oficializado como uma organização não governamental.',
+            description: 'Em abril, conquistamos um dos nossos maiores êxitos nesses três anos de EQ. Dia 22/04, o Escrevendo na Quarentena era oficializado como uma organização não governamental. Após um longo período lidando com as burocracias, estávamos finalmente passando de um projeto para uma ONG. Mudança essa que nos possibilita inserção na prestação de serviços sociais. ',
+            icon: <FaLandmarkFlag  className="text-yellow-500"/>,
         }
     ];
 
@@ -69,23 +91,6 @@ export const HistoryPage = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [timelineRef, setActiveIndex]);
-
-    const getTypeColor = (type: string) => {
-        switch (type) {
-            case 'foundation':
-                return 'bg-green-500';
-            case 'project':
-                return 'bg-blue-500';
-            case 'expansion':
-                return 'bg-purple-500';
-            case 'achievement':
-                return 'bg-yellow-500';
-            case 'anniversary':
-                return 'bg-green-500';
-            default:
-                return 'bg-gray-500';
-        }
-    };
 
     return (
         <>
@@ -115,7 +120,7 @@ export const HistoryPage = () => {
                                 <div className="w-1/2 flex justify-center">
                                     <div className="relative">
                                         <div
-                                            className={`w-6 h-6 rounded-full ${getTypeColor(milestone.type)} flex items-center justify-center`}>
+                                            className={`w-6 h-6 rounded-full  flex items-center justify-center`}>
                                             {milestone.icon}
                                         </div>
                                         <div
