@@ -16,15 +16,15 @@ export const Footer = () => {
     const {pathname} = location;
 
     const resoursesBar: NavLinksI[] = [
-        {href: "/", label: "Edital", externalLink: true },
+        {href: "/", label: "Edital", externalLink: true, showInExternalPages: true },
     ];
     const joinUs: NavLinksI[] = [
-        {href: "/", label: "Como apoiar", externalLink: true },
-        {href: "/", label: "Seja um voluntário", externalLink: true},
-        {href: "/", label: "Parcerias", externalLink: isHomePage(pathname) },
+        {href: "/", label: "Como apoiar", externalLink: true, showInExternalPages: true },
+        {href: "/", label: "Seja um voluntário", externalLink: true, showInExternalPages: true},
+        {href: "/", label: "Parcerias", externalLink: isHomePage(pathname), showInExternalPages: true },
     ]
     const ConnectToEQ: NavLinksI[] = [
-        {href: "mailto:escrevendoquarentena.rh@gmail.com", label: "E-mail", externalLink: true},
+        {href: "mailto:escrevendoquarentena.rh@gmail.com", label: "E-mail", externalLink: true, showInExternalPages: true },
     ];
 
     return (
