@@ -6,11 +6,13 @@ import {Link, useLocation} from "react-router-dom";
 
 import {NavLinksI} from "../Contracts/NavLinksI.ts";
 
-import Button from "./Button.tsx";
 import {isHomePage} from "../Helpers/Helper.ts";
 import {MENU_MIN_HEIGHT} from "../Constants/Conts.ts";
 
-export const NavBar = () => {
+interface NavBarProps {
+    activeColor: boolean,
+}
+export const NavBar = ({activeColor = false}: NavBarProps) => {
 
     const location = useLocation();
     const {pathname} = location;
@@ -28,13 +30,15 @@ export const NavBar = () => {
     })
 
     const navLinks: NavLinksI[] = [
-        {href: "/#home", label: "Home", externalLink: isHomePage(pathname) },
-        {href: "/#about-us", label: "Sobre nós", externalLink: isHomePage(pathname) },
-        {href: "/#our-results", label: "Resultados", externalLink: isHomePage(pathname) },
-        {href: "/history", label: "History", externalLink: true},
-        {href: "/#MVV", label: "MVV", externalLink: isHomePage(pathname) },
-        {href: "/#join", label: "Faça Parte", externalLink: isHomePage(pathname) },
+        {href: "/#home", label: "Home", externalLink: isHomePage(pathname), showInExternalPages: true },
+        {href: "/#about-us", label: "Sobre nós", externalLink: isHomePage(pathname), showInExternalPages: false },
+        {href: "/#our-results", label: "Resultados", externalLink: isHomePage(pathname), showInExternalPages: false },
+        {href: "/history", label: "História", externalLink: true, showInExternalPages: !isHomePage(pathname) },
+        {href: "/#MVV", label: "MVV", externalLink: isHomePage(pathname), showInExternalPages: false },
+        {href: "/#join", label: "Faça Parte", externalLink: isHomePage(pathname), showInExternalPages: false },
     ];
+
+    console.log(navLinks)
 
     const changeBackground = () => {
         if (window.scrollY >= MENU_MIN_HEIGHT) {
@@ -46,7 +50,7 @@ export const NavBar = () => {
 
     return (
         <>
-            <header className={`sm:px-8 px-4 py-2 z-10 w-full fixed ${!navbarScroll ? '' : 'bg-blue-light-xs'}`}>
+            <header className={`sm:px-8 px-4 py-2 z-10 w-full fixed ${!navbarScroll && !activeColor ? '' : 'bg-blue-light-xs'}`}>
                 <nav className="flex justify-between items-center max-container">
                     <Link
                         to={`/`}
@@ -55,12 +59,13 @@ export const NavBar = () => {
                         Logo
                     </Link>
 
-                    <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
+                    <ul className={`flex-1 flex justify-end items-center max-lg:hidden ${navLinks.filter(item => item.showInExternalPages).length > 1 ? 'gap-16' : ''}`}>
                         {navLinks.map((item) => (
                             <li key={item.label}>
 
                                 {item.externalLink ? (
                                     <Link
+                                        hidden={!item.showInExternalPages}
                                         to={`${item.href}`}
                                         className={`font-montserrat leading-normal text-lg ${!navbarScroll ? 'text-gray-50' : 'text-gray-700'}`}
                                     >
@@ -80,14 +85,15 @@ export const NavBar = () => {
                         ))}
                     </ul>
 
-                    <div
-                        className="flex gap-2 text-lg leading-normal font-medium font-montserrat max-lg:hidden wide:mr-24">
-                        <Button className={
-                            `rounded-xl py-1.5 text-gray-800 ${navbarScroll ? 'bg-black text-gray-50' : 'bg-white'}`
-                        }>
-                            Login
-                        </Button>
-                    </div>
+                    {/*<div*/}
+                    {/*    className="flex gap-2 text-lg leading-normal font-medium font-montserrat max-lg:hidden wide:mr-24">*/}
+                    {/*    <Button className={*/}
+                    {/*        `rounded-xl py-1.5 text-gray-800 ${navbarScroll ? 'bg-black text-gray-50' : 'bg-white'}`*/}
+                    {/*    }>*/}
+                    {/*        Login*/}
+                    {/*    </Button>*/}
+                    {/*</div>*/}
+
                     <div
                         className="hidden max-lg:block cursor-pointer"
                         onClick={() => {
@@ -117,6 +123,7 @@ export const NavBar = () => {
                                 <li key={item.label}>
                                     {item.externalLink ? (
                                         <Link
+                                            hidden={!item.showInExternalPages}
                                             to={`${item.href}`}
                                             className="font-montserrat leading-normal text-lg text-gray-700"
                                         >
@@ -133,12 +140,12 @@ export const NavBar = () => {
                                     )}
                                 </li>
                             ))}
-                            <Button className={
-                                "bg-white rounded-xl py-1.5 text-gray-50" +
-                                (isMenuOpen && " bg-fuchsia-700")
-                            }>
-                                Login
-                            </Button>
+                            {/*<Button className={*/}
+                            {/*    "bg-white rounded-xl py-1.5 text-gray-50" +*/}
+                            {/*    (isMenuOpen && " bg-fuchsia-700")*/}
+                            {/*}>*/}
+                            {/*    Login*/}
+                            {/*</Button>*/}
                         </ul>
                     </nav>
                 </div>

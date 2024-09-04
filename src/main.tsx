@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <div className="min-h-[200vh]">
+        <div>
 
             <RouterProvider router={router} />
 

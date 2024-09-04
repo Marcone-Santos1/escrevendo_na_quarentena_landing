@@ -17,7 +17,7 @@ import PodCast from '/svg/Podcast.svg';
 export const HomePage = () => {
     return (
         <>
-            <NavBar/>
+            <NavBar activeColor={false}/>
 
             <HomeSection/>
 
